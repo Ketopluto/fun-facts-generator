@@ -119,6 +119,15 @@
             left: 100%;
         }
 
+        button[onclick*="personal"] {
+            background: linear-gradient(45deg, #6B66FF, #53A8FF);
+            box-shadow: 0 4px 15px rgba(107, 102, 255, 0.3);
+        }
+
+        button[onclick*="personal"]:hover {
+            box-shadow: 0 6px 20px rgba(107, 102, 255, 0.4);
+        }
+
         #loading {
             display: none;
             color: #FF6B6B;
@@ -163,6 +172,7 @@
         <div id="fact-display" class="fade-in">Click any button to generate a fun fact!</div>
         <div id="loading">Loading...</div>
         <div class="button-container">
+            <button onclick="getRandomFact('personal')">👤 Personal Fact</button>
             <button onclick="getRandomFact('useless')">✨ Useless Fact</button>
             <button onclick="getRandomFact('numbers')">🔢 Number Fact</button>
             <button onclick="getRandomFact('cat')">🐱 Cat Fact</button>
@@ -170,9 +180,21 @@
     </div>
 
     <script>
-        // Previous JavaScript code remains the same
         const factDisplay = document.getElementById('fact-display');
         const loadingText = document.getElementById('loading');
+
+        const personalFacts = [
+            "Night Owl: I get my best ideas when everyone else is asleep.",
+            "Secret Foodie: There's at least one dish I could eat every single day and never get tired of.",
+            "Music Explorer: I have a playlist for every mood, but there's always that one song on repeat.",
+            "Movie Buff: I can quote lines from my favorite movies or shows like a pro.",
+            "Animal Whisperer: Animals seem to instinctively like me—even the grumpy ones.",
+            "Adventure Seeker: I'd jump at the chance for a spontaneous road trip or exploration.",
+            "Collector: I might have a quirky collection of something small, unique, or nostalgic.",
+            "DIY Enthusiast: I've probably attempted to make or fix something myself, with mixed results.",
+            "Unusual Talent: I've mastered a random skill or trick that always surprises people.",
+            "Daydreamer: I often imagine 'what if' scenarios that spark my creativity."
+        ];
 
         async function getRandomFact(type) {
             factDisplay.classList.remove('fade-in');
@@ -184,6 +206,12 @@
                 let fact;
 
                 switch(type) {
+                    case 'personal':
+                        const randomPersonalIndex = Math.floor(Math.random() * personalFacts.length);
+                        fact = personalFacts[randomPersonalIndex];
+                        loadingText.style.display = 'none';
+                        break;
+
                     case 'useless':
                         response = await fetch('https://uselessfacts.jsph.pl/random.json?language=en');
                         const uselessData = await response.json();
@@ -192,13 +220,12 @@
 
                     case 'numbers':
                         const randomNumber = Math.floor(Math.random() * 1000);
-                        response = await fetch(`http://numbersapi.com/${randomNumber}`);
+                        response = await fetch(`https://cors-anywhere.herokuapp.com/http://numbersapi.com/${randomNumber}`);
                         fact = await response.text();
                         break;
 
                     case 'cat':
-                        response = await fetch('https://catfact.ninja/fact');
-                        const catData = await response.json();
+                        response = await fetch('https://catfact.ninja/fact'); catData = await response.json();
                         fact = catData.fact;
                         break;
 
