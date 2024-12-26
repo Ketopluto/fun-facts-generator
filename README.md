@@ -4,13 +4,12 @@ A beautiful, interactive web application that generates random facts from variou
 
 ## 🌟 Live Demo
 
-Check out the live website: [Fun Facts Generator](https://YOUR-USERNAME.github.io/fun-facts-generator/)
-
-![Fun Facts Generator Preview](preview.png)
+Check out the live website: [Fun Facts Generator](https://ketopluto.github.io/fun-facts-generator/)
 
 ## ✨ Features
 
 - **Multiple Fact Categories:**
+  - Personal Facts
   - Useless Facts
   - Number Facts
   - Cat Facts
@@ -44,12 +43,10 @@ Check out the live website: [Fun Facts Generator](https://YOUR-USERNAME.github.i
 1. Clone the repository:
    ```bash
    git clone https://github.com/Ketopluto/fun-facts-generator.git
-
 2. Navigate to the project directory:
    ```bash
    cd fun-facts-generator
-
-3. Open index.html in your preferred browser.
+3. Open the index.html in your preferred browser.
 
 ## 🎨 Customization
 
@@ -71,7 +68,7 @@ You can customize the website by:
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/YOUR-USERNAME/fun-facts-generator/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Ketopluto/fun-facts-generator/issues).
 
 1. Fork the project
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -81,7 +78,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is open-source and available under the MIT License. Feel free to use, modify, and distribute it as you like.
 
 ## 🙏 Acknowledgments
 
@@ -89,7 +86,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - APIs provided by various free services
 - Google Fonts for the typography
 
-Project Link: [avs-fun-fact-generator](https://github.com/Ketopluto/fun-facts-generator)
+Project Link: [Fun Facts Generator](https://ketopluto.github.io/fun-facts-generator/)
 
 ---
 
