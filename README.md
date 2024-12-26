@@ -11,7 +11,6 @@ Check out the live website: [Fun Facts Generator](https://ketopluto.github.io/fu
 - **Multiple Fact Categories:**
   - Personal Facts
   - Useless Facts
-  - Number Facts
   - Cat Facts
 
 - **Modern UI Elements:**
@@ -35,7 +34,6 @@ Check out the live website: [Fun Facts Generator](https://ketopluto.github.io/fu
 - Google Fonts (Poppins)
 - Public APIs:
   - [Useless Facts API](https://uselessfacts.jsph.pl/)
-  - [Numbers API](http://numbersapi.com/)
   - [Cat Facts API](https://catfact.ninja/)
 
 ## 🛠️ Setup and Installation
