@@ -174,7 +174,6 @@
         <div class="button-container">
             <button onclick="getRandomFact('personal')">👤 Personal Fact</button>
             <button onclick="getRandomFact('useless')">✨ Useless Fact</button>
-            <button onclick="getRandomFact('numbers')">🔢 Number Fact</button>
             <button onclick="getRandomFact('cat')">🐱 Cat Fact</button>
         </div>
     </div>
@@ -216,12 +215,6 @@
                         response = await fetch('https://uselessfacts.jsph.pl/random.json?language=en');
                         const uselessData = await response.json();
                         fact = uselessData.text;
-                        break;
-
-                    case 'numbers':
-                        const randomNumber = Math.floor(Math.random() * 1000);
-                        response = await fetch(`https://cors-anywhere.herokuapp.com/http://numbersapi.com/${randomNumber}`);
-                        fact = await response.text();
                         break;
 
                     case 'cat':
